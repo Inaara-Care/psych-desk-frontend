@@ -9,7 +9,7 @@ export const Navbar = () => {
           <h1 className="text-xl font-semibold text-blue-600">Psych Desk</h1>
         </div> */}
          <div className="p-4 mb-2">
-        <h1 className="text-4xl font-medium text-[#1a2bc3]">Psych Desk</h1>
+        <h1 className="text-4xl font-medium text-primary">Psych Desk</h1>
       </div>
         
         <div className="flex items-center gap-4">

@@ -1,8 +1,5 @@
 @import 'tailwindcss';
 
-* {
-  box-sizing: border-box;
-}
 
 @theme {
   --color-purple-600: #6938ef;
@@ -13,4 +10,9 @@
   --color-tertiary-sky-blue: #E4F2F9;
   --color-background: #FBFBFF;
   --color-foreground: #2B2B2B;
+}
+
+
+* {
+  box-sizing: border-box;
 }

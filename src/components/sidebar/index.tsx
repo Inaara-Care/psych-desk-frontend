@@ -33,12 +33,9 @@ export const Sidebar = () => {
   const { activeTab, setActiveTab } = useSidebarContext();
   
   const isActive = (path: string) => {
-    // First check if this path matches our context state
     if (path.replace('/', '') === activeTab) return true;
-    
-    // Fallback to URL path matching for initial load
-    const temp = pathname.split('/')[2];
-    return `/${temp}` === path;
+    const endpoint = pathname.split('/')[2];
+    return `/${endpoint}` === path;
   };
 
   return (

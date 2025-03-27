@@ -1,37 +1,9 @@
-import { StatsCard, RevenueChart, AnalyticsChart } from '@/components';
-import { Button } from '@/components/core';
-import Link from 'next/link';
+import { AnalyticsChart, RevenueChart, StatsCard } from '@/components';
 import React from 'react';
-
-const buttonGroup = [
-  {
-    label: 'Overview',
-    isActive: true,
-    route: '/dashboard/',
-  },
-  {
-    label: 'Session Details',
-    isActive: false,
-    route: '/dashboard/session-details',
-  },
-];
 
 const page = () => {
   return (
     <div>
-        <div className="flex gap-2 mb-5">
-            {buttonGroup.map((btn, index) => (
-              <Link key={index} href={btn.route}>
-                <Button
-                  key={index}
-                  size="sm"
-                  label={btn.label}
-                  variant="outline"
-                  customClasses={`border-primary hover:bg-primary hover:text-white ${btn.isActive && 'text-white bg-primary'}`}
-                />
-              </Link>
-            ))}
-          </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <StatsCard
           title="Total session"

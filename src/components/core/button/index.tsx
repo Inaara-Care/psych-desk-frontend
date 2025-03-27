@@ -1,5 +1,3 @@
-import { link } from "fs";
-
 interface IButton {
   label: string;
   size: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full';

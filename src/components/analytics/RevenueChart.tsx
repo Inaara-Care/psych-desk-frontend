@@ -42,7 +42,7 @@ export const RevenueChart = () => {
         cornerRadius: 8,
         displayColors: false,
         callbacks: {
-          label: function(context) {
+          label: function(context: {parsed: {y: number}}) {
             return `$${context.parsed.y.toLocaleString()}`;
           }
         }
@@ -58,7 +58,8 @@ export const RevenueChart = () => {
           display: false,
         },
         ticks: {
-          callback: function(value) {
+          callback: function(this: import('chart.js').Scale, tickValue: string | number) {
+            const value = Number(tickValue);
             if (value === 0) return '0';
             if (value === 2000) return '2K';
             if (value === 4000) return '4K';

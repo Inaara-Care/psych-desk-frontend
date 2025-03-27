@@ -1,60 +1,75 @@
+'use client';
+
 import React from 'react';
+import { Doughnut } from 'react-chartjs-2';
+import {
+  Chart as ChartJS,
+  ArcElement,
+  Tooltip,
+  Legend
+} from 'chart.js';
+
+ChartJS.register(
+  ArcElement,
+  Tooltip,
+  Legend
+);
 
 export const AnalyticsChart = () => {
+  // Data for the donut chart
+  const data = {
+    labels: ['Total paid', 'Total paid', 'Total paid'],
+    datasets: [
+      {
+        data: [35, 25, 40], // Percentages for each segment
+        backgroundColor: ['#1e40af', '#60a5fa', '#f59e0b'],
+        borderWidth: 0,
+        cutout: '70%',
+        borderRadius: 5,
+      },
+    ],
+  };
+
+  // Options for the donut chart
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        enabled: false,
+      },
+    },
+    animation: {
+      animateRotate: true,
+      animateScale: true
+    },
+  };
+
   return (
-    <div className="relative w-48 h-48 mx-auto">
-      <svg className="w-full h-full" viewBox="0 0 100 100">
-        {/* Blue segment (120 degrees) */}
-        <circle
-          cx="50"
-          cy="50"
-          r="40"
-          fill="none"
-          stroke="#3b82f6"
-          strokeWidth="20"
-          strokeDasharray="251.2 377"
-          transform="rotate(-90 50 50)"
-        />
-        {/* Light blue segment (90 degrees) */}
-        <circle
-          cx="50"
-          cy="50"
-          r="40"
-          fill="none"
-          stroke="#93c5fd"
-          strokeWidth="20"
-          strokeDasharray="188.4 377"
-          strokeDashoffset="-251.2"
-          transform="rotate(-90 50 50)"
-        />
-        {/* Orange segment (150 degrees) */}
-        <circle
-          cx="50"
-          cy="50"
-          r="40"
-          fill="none"
-          stroke="#f59e0b"
-          strokeWidth="20"
-          strokeDasharray="314 377"
-          strokeDashoffset="-439.6"
-          transform="rotate(-90 50 50)"
-        />
-      </svg>
-      <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <div className="flex items-center gap-2 text-sm">
-          <span className="w-3 h-3 rounded-full bg-blue-600"></span>
-          <span>Total paid</span>
-          <span className="font-semibold">2K</span>
+    <div className="flex flex-col h-64">
+      <div className="relative w-48 h-48 mx-auto">
+        <Doughnut data={data} options={options} />
+      </div>
+      
+      {/* Legend items below the chart */}
+      <div className="flex flex-col items-center gap-2 mt-4">
+        <div className="flex items-center gap-2 text-sm truncate max-w-full">
+          <span className="w-3 h-3 rounded-full bg-blue-800 flex-shrink-0"></span>
+          <span className="text-gray-600 truncate">Total paid</span>
+          <span className="font-semibold ml-1 flex-shrink-0">2K</span>
         </div>
-        <div className="flex items-center gap-2 text-sm">
-          <span className="w-3 h-3 rounded-full bg-blue-300"></span>
-          <span>Total paid</span>
-          <span className="font-semibold">2K</span>
+        <div className="flex items-center gap-2 text-sm truncate max-w-full">
+          <span className="w-3 h-3 rounded-full bg-blue-400 flex-shrink-0"></span>
+          <span className="text-gray-600 truncate">Total paid</span>
+          <span className="font-semibold ml-1 flex-shrink-0">2K</span>
         </div>
-        <div className="flex items-center gap-2 text-sm">
-          <span className="w-3 h-3 rounded-full bg-amber-500"></span>
-          <span>Total paid</span>
-          <span className="font-semibold">2K</span>
+        <div className="flex items-center gap-2 text-sm truncate max-w-full">
+          <span className="w-3 h-3 rounded-full bg-amber-500 flex-shrink-0"></span>
+          <span className="text-gray-600 truncate">Total paid</span>
+          <span className="font-semibold ml-1 flex-shrink-0">2K</span>
         </div>
       </div>
     </div>

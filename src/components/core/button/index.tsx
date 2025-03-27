@@ -1,6 +1,6 @@
 interface IButton {
   label: string;
-  size: 'sm' | 'md' | 'lg' | 'xl' | '2xl';
+  size: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full';
   variant: 'primary' | 'secondary' | 'outline' | 'link';
   disabled?: boolean;
   prefixIcon?: React.ReactNode;
@@ -11,11 +11,13 @@ interface IButton {
 
 const sizeUtil: Record<string, string> = {
   sm: 'rounded-lg px-4 py-2 text-sm',
+  full: 'w-full px-4 py-2'
 };
 
 const variantUtil: Record<string, string> = {
   primary: 'bg-primary text-white',
   outline: 'border-1 border-gray-400',
+  link: 'text-primary',
 };
 
 export const Button: React.FC<IButton> = ({

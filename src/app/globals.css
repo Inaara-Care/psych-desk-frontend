@@ -16,3 +16,39 @@
 * {
   box-sizing: border-box;
 }
+
+/* Make the date input position relative so we can position the indicator absolutely */
+input[type="date"] {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /* Hide the visible icon but expand its clickable area to cover the entire input */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+  }
+/* Make the time input position relative so we can position the indicator absolutely */
+input[type="time"] {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /* Hide the visible clock icon but expand its clickable area to cover the entire input */
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    pointer-events: auto; /* so it still receives clicks */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+    
+  
+  

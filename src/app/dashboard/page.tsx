@@ -30,6 +30,7 @@ const page = () => {
           icon="users"
         />
       </div>
+>>>>>>> 39311a6e8717ec592ce4f2f1c5325f75f74709f5
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 bg-white rounded-xl p-6 shadow-sm">

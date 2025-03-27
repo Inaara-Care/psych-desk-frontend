@@ -1,3 +1,3 @@
 export * from './button'
-export * from './input_field'
-export * from './input_text_area'
+export * from './input-field'
+export * from './input-text-area'

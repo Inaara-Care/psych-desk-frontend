@@ -1,8 +1,10 @@
 import React from 'react'
-
+import  DemoInputPage from '../../pages/DemoInputPage'
 const page = () => {
   return (
-    <div>page</div>
+    <div>
+        <DemoInputPage/>
+    </div>
   )
 }
 

@@ -1,10 +1,13 @@
-import { Button } from '@/components';
+'use client'
+import React from 'react'
+import DemoInputPage  from '../pages/DemoInputPage'
 
-export default function Home() {
+const page = () => {
   return (
-    <div className="text-center my-32">
-      <Button label="Button CTA" size={'sm'} variant={'primary'} />
+    <div>
+        <DemoInputPage/>
     </div>
-  );
+  )
 }
 
+export default page

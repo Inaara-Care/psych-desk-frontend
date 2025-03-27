@@ -1,11 +1,11 @@
 'use client'
 import React from 'react'
-import DemoInputPage  from '../pages/DemoInputPage'
-
+import DemoInputPage  from '../Demo/DemoInputPage'
+import DemoInputArea from '@/Demo/DemoInputArea'    
 const page = () => {
   return (
     <div>
-        <DemoInputPage/>
+        <DemoInputArea/>
     </div>
   )
 }

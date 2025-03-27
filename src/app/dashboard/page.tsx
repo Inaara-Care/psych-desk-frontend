@@ -1,5 +1,5 @@
 import React from 'react'
-import  DemoInputPage from '../../pages/DemoInputPage'
+import  DemoInputPage from '../../Demo/DemoInputPage'
 const page = () => {
   return (
     <div>

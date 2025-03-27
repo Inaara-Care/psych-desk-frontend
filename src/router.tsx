@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
-import DemoDropdownPage from './pages/DemoDropdownPage';
+import DemoDropdownPage from './Demo/DemoInputArea';
 
 export const router = createBrowserRouter([
   {

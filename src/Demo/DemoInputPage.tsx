@@ -1,13 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import { InputButton } from "../components/core/input_field";
+import { InputField } from "../components/core/input_field";
 
 const DemoInputPage = () => {
   const [name, setName] = useState("");
   return (
     <div className="w-full min-h-screen flex items-center justify-center">
         <div className="w-[450px] p-6 space-y-10">
-        <InputButton
+        <InputField
           type="Location"
           lead = {true}
           label='Name'

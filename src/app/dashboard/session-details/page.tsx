@@ -1,10 +1,8 @@
-'use client'
 import React from 'react'
+
 const page = () => {
   return (
-    <div>
-      Landing page
-    </div>
+    <div>Session Details</div>
   )
 }
 

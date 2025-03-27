@@ -1,8 +1,5 @@
 @import 'tailwindcss';
 
-* {
-  box-sizing: border-box;
-}
 
 @theme {
   --color-purple-600: #6938ef;
@@ -15,6 +12,10 @@
   --color-foreground: #2B2B2B;
 }
 
+
+* {
+  box-sizing: border-box;
+}
 
 /* Make the date input position relative so we can position the indicator absolutely */
 input[type="date"] {

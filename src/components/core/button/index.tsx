@@ -6,7 +6,7 @@ interface IButton {
   prefixIcon?: React.ReactNode;
   suffixIcon?: React.ReactNode;
   onClick?: () => void;
-  className?: string;
+  customClasses?: string;
 }
 
 const sizeUtil: Record<string, string> = {
@@ -15,6 +15,7 @@ const sizeUtil: Record<string, string> = {
 
 const variantUtil: Record<string, string> = {
   primary: 'bg-primary text-white',
+  outline: 'border-1 border-gray-400',
 };
 
 export const Button: React.FC<IButton> = ({
@@ -24,9 +25,13 @@ export const Button: React.FC<IButton> = ({
   disabled = false,
   prefixIcon,
   suffixIcon,
+  customClasses,
 }) => {
   return (
-    <button disabled={disabled} className={`font-semibold hover:cursor-pointer ${sizeUtil[size]} ${variantUtil[variant]}`}>
+    <button
+      disabled={disabled}
+      className={`font-semibold hover:cursor-pointer ${sizeUtil[size]} ${variantUtil[variant]} ${customClasses}`}
+    >
       {prefixIcon && <span>{prefixIcon}</span>}
       <span>{label}</span>
       {suffixIcon && <span>{suffixIcon}</span>}

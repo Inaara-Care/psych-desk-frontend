@@ -1,9 +1,6 @@
 'use client';
-<<<<<<< HEAD
-import  Button  from '@/components/core/button';
-=======
+
 import { Button } from '@/components';
->>>>>>> 496ce01 (Feat/analytics (#3))
 import Link from 'next/link';
 import React, { useState } from 'react';
 

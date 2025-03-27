@@ -1,5 +1,6 @@
 import React from 'react';
 import { Bell, ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 
 export const Navbar = () => {
   return (
@@ -18,9 +19,11 @@ export const Navbar = () => {
           </button>
           
           <div className="flex items-center gap-3">
-            <img
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+            <Image
+              src="/assets/profile.avif"
               alt="Profile"
+              width={36}
+              height={32}
               className="w-8 h-8 rounded-full object-cover"
             />
             <div className="flex items-center gap-1 cursor-pointer">

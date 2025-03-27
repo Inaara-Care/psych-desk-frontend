@@ -10,12 +10,17 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+<<<<<<< HEAD
     "@fontsource/inter": "^5.2.5",
+=======
+    "chart.js": "^4.4.8",
+>>>>>>> 496ce01 (Feat/analytics (#3))
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "lucide-react": "^0.484.0",
     "next": "15.2.4",
     "react": "^19.0.0",
+    "react-chartjs-2": "^5.3.0",
     "react-datepicker": "^8.2.1",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",

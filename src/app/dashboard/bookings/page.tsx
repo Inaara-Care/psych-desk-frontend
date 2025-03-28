@@ -1,15 +1,12 @@
-import { StatsCard, RevenueChart, AnalyticsChart } from '@/components';
 import React from 'react';
 
-const page = () => {
-  return (
-    <div>
-      
-
-
-        
-    </div>
-  );
+const BookingsPage = () => {
+    return (
+        <div>
+            <h1 className="text-2xl font-semibold mb-6">Bookings</h1>
+            {/* Add your bookings content here */}
+        </div>
+    );
 };
 
-export default page;
+export default BookingsPage;

@@ -23,6 +23,7 @@ const TAB_ALIAS: Record<string, string> = {
   'settings': 'Settings',
   'invoices': 'Invoices',
   'calendar': 'Calendar',
+  'bookings': 'Bookings'
 }
 
 const SidebarContext = createContext<SidebarContextType>(initialState);

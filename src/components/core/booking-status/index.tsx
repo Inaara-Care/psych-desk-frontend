@@ -1,9 +1,9 @@
 import React from "react";
 import "@fontsource/inter/500.css";
 
-export type Status = "Booked" | "Pending" | "Recurring" | "Cancelled";
+export type BookingStatus = "Booked" | "Pending" | "Recurring" | "Cancelled";
 
-export const statusStyles: Record<Status, string> = {
+export const BOOKING_STATUS_STYLES: Record<BookingStatus, string> = {
   Booked: "text-[rgba(0,167,72,1)] border-[rgba(0,167,72,1)] bg-[rgba(231,255,241,1)]",
   Pending: "text-[rgba(255,165,0,1)] border-[rgba(255,165,0,1)] bg-[rgba(255,249,237,1)]",
   Recurring: "text-[rgba(0,131,255,1)] border-[rgba(0,131,255,1)] bg-[rgba(244,250,255,1)]",
@@ -11,12 +11,12 @@ export const statusStyles: Record<Status, string> = {
 };
 
 interface BookingStatusProps {
-  status: Status;
+  status: BookingStatus;
   height?: number;
   width?: number;
 }
 
-const BookingStatus: React.FC<BookingStatusProps> = ({
+export const BookingStatus: React.FC<BookingStatusProps> = ({
   status,
   height = 19,
   width = 60,
@@ -61,7 +61,7 @@ const BookingStatus: React.FC<BookingStatusProps> = ({
 
   return (
     <span
-      className={`inline-flex items-center justify-center ${statusStyles[status]}`}
+      className={`inline-flex items-center justify-center ${BOOKING_STATUS_STYLES[status]}`}
       style={dynamicStyle}
     >
       {status}
@@ -69,4 +69,3 @@ const BookingStatus: React.FC<BookingStatusProps> = ({
   );
 };
 
-export default BookingStatus;

@@ -1,18 +1,18 @@
 'use client';
 import React from "react";
-import BookingStatus, { Status } from "@/components/core/booking-status";
 import EditButton from "@/components/core/edit-button";
 import { FaClock } from "react-icons/fa";
 import { IoMdCalendar } from "react-icons/io";
+import { BookingStatus } from "../core";
 
-const borderColorMap: Record<Status, string> = {
+const borderColorMap: Record<BookingStatus, string> = {
   Booked:    "border-[rgba(0,167,72,1)]",
   Pending:   "border-[rgba(255,165,0,1)]",
   Recurring: "border-[rgba(0,131,255,1)]",
   Cancelled: "border-[rgba(244,0,4,1)]",
 };
 
-const shadowMap: Record<Status, string> = {
+const shadowMap: Record<BookingStatus, string> = {
   Booked:    "0px 2px 12px rgba(0,171,48,0.25)",
   Pending:   "0px 2px 12px rgba(255,165,0,0.25)",
   Recurring: "0px 2px 12px rgba(0,131,255,0.25)",
@@ -20,7 +20,7 @@ const shadowMap: Record<Status, string> = {
 };
 
 interface BookingCardProps {
-  status: Status;
+  status: BookingStatus;
   name: string;
   bookingId: string;
   date: string;

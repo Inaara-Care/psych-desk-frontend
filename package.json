@@ -10,11 +10,8 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-<<<<<<< HEAD
     "@fontsource/inter": "^5.2.5",
-=======
     "chart.js": "^4.4.8",
->>>>>>> 496ce01 (Feat/analytics (#3))
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "lucide-react": "^0.484.0",

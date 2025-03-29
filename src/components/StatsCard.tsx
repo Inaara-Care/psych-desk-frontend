@@ -11,7 +11,7 @@ import {
   ArrowRight,
   FileText,
 } from 'lucide-react';
-import { Button } from '../core';
+import  Button  from '@/components/core/button';
 
 interface TrendProps {
   value: string;

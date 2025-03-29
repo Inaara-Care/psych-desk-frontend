@@ -1,7 +1,7 @@
 import { AnalyticsChart, RevenueChart, StatsCard } from '@/components';
 import React from 'react';
 
-const page = () => {
+const DashboardPage = () => {
   return (
     <div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">

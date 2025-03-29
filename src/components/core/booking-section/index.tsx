@@ -4,7 +4,7 @@ import "@fontsource/inter/500.css";
 
 export type StatusSection = "Upcoming" | "Reschedule" | "Cancelled";
 
-// Define base inline styles for each status
+
 const baseStyles: Record<StatusSection, React.CSSProperties> = {
   Upcoming: {
     boxSizing: "border-box",

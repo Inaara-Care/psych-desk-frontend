@@ -1,0 +1,132 @@
+{
+    "bookings": [
+      {
+        "status": "Booked",
+        "name": "Aishwarya Bhardwaj",
+        "bookingId": "INAB0001",
+        "date": "23 Feb 2025",
+        "time": "09:00 - 10:00 AM",
+        "platform": "Gmeet"
+      },
+      {
+        "status": "Pending",
+        "name": "Rahul Sharma",
+        "bookingId": "INAB0002",
+        "date": "23 Feb 2025",
+        "time": "10:30 - 11:30 AM",
+        "platform": "Gmeet"
+      },
+      {
+        "status": "Cancelled",
+        "name": "Priya Patel",
+        "bookingId": "INAB0003",
+        "date": "23 Feb 2025",
+        "time": "02:00 - 03:00 PM",
+        "platform": "Gmeet"
+      },
+      {
+        "status": "Cancelled",
+        "name": "Vikram Singh",
+        "bookingId": "INAB0004",
+        "date": "23 Feb 2025",
+        "time": "04:00 - 05:00 PM",
+        "platform": "Gmeet"
+      },
+      {
+        "status": "Booked",
+        "name": "Neha Gupta",
+        "bookingId": "INAB0005",
+        "date": "24 Feb 2025",
+        "time": "11:00 - 12:00 PM",
+        "platform": "Gmeet"
+      },
+      {
+        "status": "Pending",
+        "name": "Arjun Kumar",
+        "bookingId": "INAB0006",
+        "date": "24 Feb 2025",
+        "time": "03:30 - 04:30 PM",
+        "platform": "Gmeet"
+      },
+      {
+        "status": "Booked",
+        "name": "Meera Shah",
+        "bookingId": "INAB0007",
+        "date": "25 Feb 2025",
+        "time": "09:30 - 10:30 AM",
+        "platform": "Gmeet"
+      },
+      {
+        "status": "Cancelled",
+        "name": "Karan Malhotra",
+        "bookingId": "INAB0008",
+        "date": "25 Feb 2025",
+        "time": "11:00 - 12:00 PM",
+        "platform": "Gmeet"
+      },
+      {
+        "status": "Pending",
+        "name": "Ananya Desai",
+        "bookingId": "INAB0009",
+        "date": "25 Feb 2025",
+        "time": "02:30 - 03:30 PM",
+        "platform": "Gmeet"
+      },
+      {
+        "status": "Booked",
+        "name": "Rohan Kapoor",
+        "bookingId": "INAB0010",
+        "date": "26 Feb 2025",
+        "time": "10:00 - 11:00 AM",
+        "platform": "Gmeet"
+      },
+      {
+        "status": "Pending",
+        "name": "Zara Khan",
+        "bookingId": "INAB0011",
+        "date": "26 Feb 2025",
+        "time": "01:00 - 02:00 PM",
+        "platform": "Gmeet"
+      },
+      {
+        "status": "Cancelled",
+        "name": "Dev Patel",
+        "bookingId": "INAB0012",
+        "date": "26 Feb 2025",
+        "time": "04:30 - 05:30 PM",
+        "platform": "Gmeet"
+      },
+      {
+        "status": "Cancelled",
+        "name": "Priya Patel",
+        "bookingId": "INAB0503",
+        "date": "23 Feb 2025",
+        "time": "02:00 - 03:00 PM",
+        "platform": "Gmeet"
+      },
+      {
+        "status": "Cancelled",
+        "name": "Vikram Singh",
+        "bookingId": "INAB0054",
+        "date": "23 Feb 2025",
+        "time": "04:00 - 05:00 PM",
+        "platform": "Gmeet"
+      },
+      {
+        "status": "Cancelled",
+        "name": "Priya Patel",
+        "bookingId": "INAB0053",
+        "date": "23 Feb 2025",
+        "time": "02:00 - 03:00 PM",
+        "platform": "Gmeet"
+      },
+      {
+        "status": "Cancelled",
+        "name": "Vikram Singh",
+        "bookingId": "INAB0055",
+        "date": "23 Feb 2025",
+        "time": "04:00 - 05:00 PM",
+        "platform": "Gmeet"
+      }
+    ]
+}

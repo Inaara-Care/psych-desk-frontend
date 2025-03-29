@@ -16,7 +16,7 @@ import { PiLinkBold } from 'react-icons/pi';
 import { useSidebarContext } from '@/context/Sidebar.context';
 
 const menuItems = [
-  { icon: MdAnalytics, label: 'Dashboard', redirectTo: '/', },
+  { icon: MdAnalytics, label: 'Dashboard', redirectTo: '' }, // redirectTo empty means root dashboard
   { icon: PiLinkBold, label: 'Event types', redirectTo: '/event-types' },
   { icon: MdOutlineCalendarViewDay, label: 'Bookings', redirectTo: '/bookings' },
   { icon: MdOutlineCalendarMonth, label: 'Calendar', redirectTo: '/calendar' },
@@ -29,11 +29,16 @@ const menuItems = [
 ];
 
 export const Sidebar = () => {
+  // Since SidebarContext now manages activeTab from useSelectedLayoutSegment,
+  // you can continue to compute active link classes as needed.
   const pathname = usePathname();
-  const { activeTab, setActiveTab } = useSidebarContext();
-  
+
+  // Compute the current tab from the pathname.
+  // Here we remove '/dashboard' prefix.
+  const currentTab = pathname.replace('/dashboard', '') || '';
+
   const isActive = (path: string) => {
-    if (path.replace('/', '') === activeTab) return true;
+    if (path.replace('/', '') === currentTab) return true;
     const endpoint = pathname.split('/')[2];
     return `/${endpoint}` === path;
   };
@@ -41,19 +46,24 @@ export const Sidebar = () => {
   return (
     <div className="w-60 min-h-screen bg-white rounded-lg">
       <nav className="px-2 py-3">
-        <ul className="">
-          {menuItems.map((item, index) => (
-            <li key={index} className="mb-3">
-              <Link
-                href={`/dashboard/${item.redirectTo}`}
-                className={`text-foreground flex items-center gap-4 px-5 py-2.5 transition-colors duration-200 rounded-sm ${isActive(item?.redirectTo) && 'bg-tertiary-sky-blue text-primary'}`}
-                onClick={() => setActiveTab(item.redirectTo.replace('/', ''))}
-              >
-                <item.icon className={`w-5 h-5 `} />
-                <span className="text-sm font-medium">{item.label}</span>
-              </Link>
-            </li>
-          ))}
+        <ul>
+          {menuItems.map((item, index) => {
+            // Build the href ensuring no double slashes
+            const href = item.redirectTo === '' ? '/dashboard' : `/dashboard${item.redirectTo}`;
+            return (
+              <li key={index} className="mb-3">
+                <Link
+                  href={href}
+                  className={`text-foreground flex items-center gap-4 px-5 py-2.5 transition-colors duration-200 rounded-sm ${
+                    isActive(item.redirectTo) ? 'bg-tertiary-sky-blue text-primary' : ''
+                  }`}
+                >
+                  <item.icon className="w-5 h-5" />
+                  <span className="text-sm font-medium">{item.label}</span>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </div>

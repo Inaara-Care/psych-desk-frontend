@@ -1,8 +1,8 @@
 // Sidebar.context.tsx
 'use client';
 
-import { createContext, useContext, useEffect, useState, ReactNode } from "react";
-import { useSelectedLayoutSegment } from "next/navigation";
+import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { useSelectedLayoutSegment } from 'next/navigation';
 
 export type SidebarContextType = {
   activeTab: string;
@@ -10,18 +10,17 @@ export type SidebarContextType = {
   setActiveTab: (tab: string) => void;
 };
 
-
 const TAB_ALIAS: Record<string, string> = {
-    '': 'Dashboard',
-    'event-types': 'Event Types',
-    'clients': 'Clients',
-    'contacts': 'Contacts',
-    'resources': 'Resources',
-    'settings': 'Settings',
-    'invoices': 'Invoices',
-    'calendar': 'Calendar',
-    'bookings': 'Bookings'
-  };
+  '': 'Dashboard',
+  'event-types': 'Event Types',
+  clients: 'Clients',
+  contacts: 'Contacts',
+  resources: 'Resources',
+  settings: 'Settings',
+  invoices: 'Invoices',
+  calendar: 'Calendar',
+  bookings: 'Bookings',
+};
 
 const SidebarContext = createContext<SidebarContextType>({
   activeTab: '',
@@ -44,13 +43,7 @@ export const SidebarProvider = ({ children }: { children: ReactNode }) => {
   // Map the active tab to a title via TAB_ALIAS (default to "Dashboard")
   const tabHeading = TAB_ALIAS[activeTab] || 'Dashboard';
 
-  return (
-    <SidebarContext.Provider value={{ activeTab, tabHeading, setActiveTab }}>
-      {children}
-    </SidebarContext.Provider>
-  );
+  return <SidebarContext.Provider value={{ activeTab, tabHeading, setActiveTab }}>{children}</SidebarContext.Provider>;
 };
 
 export default SidebarContext;
-
-

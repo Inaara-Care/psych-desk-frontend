@@ -37,9 +37,7 @@ const DashboardPage = () => {
             <div>
               <h2 className="text-lg font-semibold text-gray-900">Revenue statistic</h2>
               <div className="flex items-center gap-2 mt-1">
-                <span className="text-sm text-green-500">
-                  00% in sessions of &quot;depression&quot;
-                </span>
+                <span className="text-sm text-green-500">00% in sessions of &quot;depression&quot;</span>
               </div>
             </div>
             <button className="p-2 hover:bg-gray-100 rounded-lg">
@@ -67,6 +65,4 @@ const DashboardPage = () => {
   );
 };
 
-
 export default DashboardPage;
-

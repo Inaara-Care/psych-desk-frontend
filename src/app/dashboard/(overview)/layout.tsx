@@ -1,6 +1,5 @@
 'use client';
-
-import Button  from '@/components/core/button';
+import { Button } from '@/components';
 import Link from 'next/link';
 import React, { useState } from 'react';
 

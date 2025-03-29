@@ -1,4 +1,3 @@
-// Sidebar.tsx
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -14,6 +13,7 @@ import {
   MdOutlineSettings,
 } from 'react-icons/md';
 import { PiLinkBold } from 'react-icons/pi';
+import { useSidebarContext } from '@/context/Sidebar.context';
 
 const menuItems = [
   { icon: MdAnalytics, label: 'Dashboard', redirectTo: '' }, // redirectTo empty means root dashboard
@@ -32,11 +32,11 @@ export const Sidebar = () => {
   // Since SidebarContext now manages activeTab from useSelectedLayoutSegment,
   // you can continue to compute active link classes as needed.
   const pathname = usePathname();
-  
+
   // Compute the current tab from the pathname.
   // Here we remove '/dashboard' prefix.
   const currentTab = pathname.replace('/dashboard', '') || '';
-  
+
   const isActive = (path: string) => {
     if (path.replace('/', '') === currentTab) return true;
     const endpoint = pathname.split('/')[2];
@@ -49,9 +49,7 @@ export const Sidebar = () => {
         <ul>
           {menuItems.map((item, index) => {
             // Build the href ensuring no double slashes
-            const href = item.redirectTo === ''
-              ? '/dashboard'
-              : `/dashboard${item.redirectTo}`;
+            const href = item.redirectTo === '' ? '/dashboard' : `/dashboard${item.redirectTo}`;
             return (
               <li key={index} className="mb-3">
                 <Link

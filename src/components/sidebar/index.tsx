@@ -38,7 +38,7 @@ export const Sidebar = () => {
   const currentTab = pathname.replace('/dashboard', '') || '';
   
   const isActive = (path: string) => {
-    if (path.replace('/', '') === activeTab) return true;
+    if (path.replace('/', '') === currentTab) return true;
     const endpoint = pathname.split('/')[2];
     return `/${endpoint}` === path;
   };

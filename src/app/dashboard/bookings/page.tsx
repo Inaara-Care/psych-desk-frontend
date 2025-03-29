@@ -1,10 +1,10 @@
 import React from 'react';
+import BookingTabs from '@/components/BookingTabs';
 
 const BookingsPage = () => {
     return (
         <div>
-            <h1 className="text-2xl font-semibold mb-6">Bookings</h1>
-            {/* Add your bookings content here */}
+            <BookingTabs />
         </div>
     );
 };

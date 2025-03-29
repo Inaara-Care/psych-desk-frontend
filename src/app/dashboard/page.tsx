@@ -1,20 +1,21 @@
+'use client';
 import { StatsCard, RevenueChart, AnalyticsChart } from '@/components';
 import React from 'react';
 
-const page = () => {
+const DashboardPage = () => {
   return (
     <div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <StatsCard
           title="Total session"
           value="24"
-          trend={{ value: '00', label: 'in sessions of "depression"', isPositive: true }}
+          trend={{ value: '00', label: 'in sessions of &quot;depression&quot;', isPositive: true }}
           icon="clipboard"
         />
         <StatsCard
           title="Appointments"
           value="56"
-          trend={{ value: '00', label: 'in "new appointments"', isPositive: false }}
+          trend={{ value: '00', label: 'in &quot;new appointments&quot;', isPositive: false }}
           icon="calendar"
         />
         <StatsCard
@@ -37,7 +38,9 @@ const page = () => {
             <div>
               <h2 className="text-lg font-semibold text-gray-900">Revenue statistic</h2>
               <div className="flex items-center gap-2 mt-1">
-                <span className="text-sm text-green-500">00% in sessions of "depression"</span>
+                <span className="text-sm text-green-500">
+                  00% in sessions of &quot;depression&quot;
+                </span>
               </div>
             </div>
             <button className="p-2 hover:bg-gray-100 rounded-lg">
@@ -65,4 +68,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default DashboardPage;

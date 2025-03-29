@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-const BookingLayout = ({ children }: { children: ReactNode }) => {
+const CalendarLayout = ({ children }: { children: ReactNode }) => {
     return (
         <div className="h-screen">
             {children}
@@ -8,4 +8,4 @@ const BookingLayout = ({ children }: { children: ReactNode }) => {
     );
 };
 
-export default BookingLayout;
+export default CalendarLayout;

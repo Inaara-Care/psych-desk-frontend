@@ -20,7 +20,7 @@ const variantUtil: Record<string, string> = {
   link: 'text-primary',
 };
 
-export const Button: React.FC<IButton> = ({
+const Button: React.FC<IButton> = ({
   label,
   size = 'md',
   variant = 'primary',
@@ -40,3 +40,4 @@ export const Button: React.FC<IButton> = ({
     </button>
   );
 };
+export default Button;

@@ -48,6 +48,21 @@ input[type="time"] {
     right: 0;
     bottom: 0;
   }
+  /* globals.css (or another global stylesheet) */
+
+/* By default, .booking-sections is a row. */
+.booking-sections {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  
+  /* Switch to vertical stacking below 959px */
+  @media (max-width: 959px) {
+    .booking-sections {
+      flex-direction: column;
+    }
+  }
+  
     
   
   

@@ -1,8 +1,8 @@
+'use client';
 import React from "react";
 import { MdOutlineEdit } from "react-icons/md";
 
 interface EditButtonProps {
-
   /** Optional click handler */
   onClick?: () => void;
   /** Optional custom width (min 26) */
@@ -20,7 +20,8 @@ const EditButton: React.FC<EditButtonProps> = ({
   const finalWidth = Math.max(26, width);
   const finalHeight = Math.max(26, height);
 
-  let classes = `
+  // Use const instead of let since 'classes' is never reassigned
+  const classes = `
     inline-flex items-center justify-center
     rounded-[8px]
     text-gray-700
@@ -29,6 +30,7 @@ const EditButton: React.FC<EditButtonProps> = ({
     border-0
     bg-white hover:bg-[rgba(204,204,204,1)]
   `;
+
   return (
     <button
       className={classes}
